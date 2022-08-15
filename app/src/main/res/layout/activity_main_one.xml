@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+android:orientation="vertical"
+tools:context=".database.MainOne">
+
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?actionBarSize"
+    android:theme="?actionBarTheme"
+    android:background="@color/design_default_color_primary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "product"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/savebt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:textSize="20sp"
+        android:layout_gravity="end"
+        android:background="@color/design_default_color_primary" />
+
+</androidx.appcompat.widget.Toolbar>
+
+<TextView
+    android:textColor="@color/black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Name"
+    android:textSize="15sp"
+    android:layout_margin="10dp"/>
+
+<EditText
+    android:id="@+id/nameEdit"
+    android:hint="Type Name"
+    android:textColor="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:maxLines="1"
+    />
+
+<TextView
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/black"
+    android:text="E-mail"
+    android:textSize="15sp"
+    android:layout_margin="20dp"/>
+
+<EditText
+    android:id="@+id/emailEdit"
+    android:hint="Type E-mail"
+    android:textColor="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:textSize="18sp"
+    android:maxLines="1"
+    />
+
+<TextView
+    android:textColor="@color/black"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Age"
+    android:textSize="15sp"
+    android:layout_margin="20dp"/>
+
+<EditText
+    android:id="@+id/ageEdit"
+    android:hint="Type Age"
+    android:textColor="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:maxLines="1"
+    />
+
+<Button
+    android:id="@+id/viewbt"
+    android:textColor="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:text="view"
+    android:textSize="20sp" />
+
+</LinearLayout>
