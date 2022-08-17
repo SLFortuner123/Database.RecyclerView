@@ -1,4 +1,4 @@
-package com.slfortuner.myapplication111111111111111111.recyclerview;
+package com.slfortuner.myapplication111111111111111111.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.slfortuner.myapplication111111111111111111.R;
+import com.slfortuner.myapplication111111111111111111.models.MyModel;
 
 import java.util.List;
 

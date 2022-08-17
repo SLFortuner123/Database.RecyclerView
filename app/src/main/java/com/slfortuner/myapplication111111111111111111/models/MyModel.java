@@ -1,4 +1,4 @@
-package com.slfortuner.myapplication111111111111111111.recyclerview;
+package com.slfortuner.myapplication111111111111111111.models;
 
 public class MyModel {
 

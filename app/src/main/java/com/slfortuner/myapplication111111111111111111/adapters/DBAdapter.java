@@ -1,4 +1,4 @@
-package com.slfortuner.myapplication111111111111111111.database;
+package com.slfortuner.myapplication111111111111111111.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.slfortuner.myapplication111111111111111111.R;
+import com.slfortuner.myapplication111111111111111111.models.DBModel;
 
-import java.security.PrivateKey;
-import java.util.ArrayList;
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,13 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DBAdapter extends RecyclerView.Adapter<DBAdapter.ViewHolder> {
 
     private Context context;
-    private ArrayList name_id, email_id, age_id;
+    private List<DBModel> DBlist;
 
-    public DBAdapter(Context context, ArrayList name_id, ArrayList email_id, ArrayList age_id) {
+    public DBAdapter(Context context, List<DBModel> DBlist) {
         this.context = context;
-        this.name_id = name_id;
-        this.email_id = email_id;
-        this.age_id = age_id;
+        this.DBlist = DBlist;
     }
 
     @NonNull
@@ -36,25 +34,36 @@ public class DBAdapter extends RecyclerView.Adapter<DBAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull DBAdapter.ViewHolder holder, int position) {
-        holder.nameid.setText( String.valueOf( name_id.get( position ) ) );
-        holder.emailid.setText( String.valueOf( email_id.get( position ) ) );
-        holder.ageid.setText( String.valueOf( age_id.get( position ) ) );
+        String newname = DBlist.get( position ).getName();
+        String newemail = DBlist.get( position ).getEmail();
+        String newage = DBlist.get( position ).getAge();
+
+//       holder.setData1(newname, newemail, newage);
+        holder.nameid.setText( newname );
+        holder.emailid.setText( newemail );
+        holder.ageid.setText( newage );
 
     }
 
     @Override
     public int getItemCount() {
-        return name_id.size();
+        return DBlist.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nameid, emailid, ageid;
+        private TextView nameid, emailid, ageid;
 
         public ViewHolder(@NonNull View itemView) {
             super( itemView );
             nameid = itemView.findViewById( R.id.text1 );
             emailid = itemView.findViewById( R.id.text22 );
-            ageid  = itemView.findViewById( R.id.text3 );
+            ageid = itemView.findViewById( R.id.text3 );
         }
+
+
+    }
+
+    public void setData1(String newname, String newemail, String newage) {
+
     }
 }
